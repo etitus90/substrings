@@ -5,12 +5,13 @@ def substrings(string, dictionary)
     hash = {}
     array.each do |word|
         dictionary.each do |dict_word|
-            word.include?(dict_word)
+            if (word.include?(dict_word))
                 if (hash[dict_word])
-                    hash[dict_word] += 1
+                    hash[dict_word].value += 1
                 else
                     hash[dict_word] = 1
                 end
+            end
         end
     end
     puts hash
